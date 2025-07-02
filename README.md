@@ -23,8 +23,14 @@ docker build -t mlm-benchmark .
 ```bash
 docker run --rm --cpus="4.0" --memory="8g" -v "${PWD}/temp:/app/temp" mlm-benchmark python benchmark_test.py --n 50000
 ```
-
-### 4. Використаний алгоритм
+### 4. Tests
+```bash
+pip install -r requirements.txt
+```
+```bash
+pytest
+```
+### 5. Використаний алгоритм
 
 Для розрахунку комісій у мережі використано алгоритм обходу графа в глибину (DFS) з використанням рекурсії та мемоізацією. Кожен партнер має одного батька та довільну кількість дітей (нащадків).
 
